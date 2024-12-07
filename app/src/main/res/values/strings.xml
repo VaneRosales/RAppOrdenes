@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Ordenes</string>
+    <string name="base_url">https://10.0.2.2:7207/</string>
+
+    <string-array name="tipo_orden">
+        <item>Comer en restaurante</item>
+        <item>Llevar</item>
+    </string-array>
+
+    <string-array name="estado_orden">
+        <item>Pendiente</item>
+        <item>Cancelada</item>
+        <item>Pagada</item>
+    </string-array>
+</resources>

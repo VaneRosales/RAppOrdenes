@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.HomeActivity"
+    android:padding="0dp">
+    <!-- Aquí puedes agregar el contenido dentro de la tarjeta -->
+    <!-- Segundo Contenedor: TextView y botones en cuadrícula -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="39dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:orientation="vertical">
+        <!-- Aqui irá la foto de la coca -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="8dp"
+            app:cardBackgroundColor="@color/GrayLight"
+            app:cardCornerRadius="55dp"
+            android:layout_marginTop="36dp">
+            <!-- Contenido aquí -->
+        </com.google.android.material.card.MaterialCardView>
+        <!-- TextView superior -->
+        <TextView
+            android:id="@+id/txtTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="PUPUSERIA JENNY"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp" />
+        <!-- TextView inferior -->
+        <TextView
+            android:id="@+id/txtMensaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Bienvenida/o"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="39dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_horizontal">
+        <!-- TextView -->
+        <TextView
+            android:id="@+id/txtBotones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Botones"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:gravity="center" />
+        <!-- Cuadrícula de botones -->
+        <GridLayout
+            android:id="@+id/gridLayoutCategorias"
+            android:layout_width="334dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:columnCount="2"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <!-- Botón Pupusas de maiz -->
+            <Button
+                android:id="@+id/btnPupusasMaiz"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginStart="16dp"
+                android:backgroundTint="@color/Gray"
+                android:text="Pupudas de Maiz"
+                android:textSize="16sp"
+                app:cornerRadius="20dp" />
+            />
+            <!-- Botón 2 -->
+            <Button
+                android:id="@+id/btnPupusasArroz"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginStart="16dp"
+                android:backgroundTint="@color/Gray"
+                android:text="Pupusas de Arroz"
+                android:textSize="16sp"
+                app:cornerRadius="20dp" />
+            />
+            <!-- Botón 3 -->
+            <Button
+                android:id="@+id/btnBebidas"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginStart="16dp"
+                android:backgroundTint="@color/Gray"
+                android:text="Bebidas"
+                android:textSize="16sp"
+                app:cornerRadius="20dp" />
+            />
+            <!-- Botón 4 -->
+            <Button
+                android:id="@+id/btnCategory"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginStart="16dp"
+                android:backgroundTint="@color/Gray"
+                android:text="Ordenes"
+                android:textSize="16sp"
+                app:cornerRadius="20dp" />
+            />
+        </GridLayout>
+    </LinearLayout>
+</LinearLayout>

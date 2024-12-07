@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <!-- Título de la actividad -->
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EDITAR ORDEN"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"
+        android:gravity="center" />
+
+    <!-- Campo: Nombre del cliente -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cliente"
+        android:textSize="16sp"
+        android:fontFamily="@font/oswald"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/edtCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre del cliente"
+        android:inputType="text"
+        android:background="@android:color/white"
+        android:padding="12dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mesa"
+        android:textSize="16sp"
+        android:fontFamily="@font/oswald"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/edtMesa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="idmesa"
+        android:inputType="text"
+        android:background="@android:color/white"
+        android:padding="12dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Campo: Fecha de la orden -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha de la orden"
+        android:textSize="16sp"
+        android:fontFamily="@font/oswald"
+        android:layout_marginBottom="8dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/edtFecha"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:hint="Fecha de la orden"
+            android:inputType="date"
+            android:background="@android:color/white"
+            android:padding="12dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Icono del calendario para abrir el DatePicker -->
+        <ImageView
+            android:id="@+id/imgCalendar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_menu_today"
+            android:contentDescription="Seleccionar Fecha"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+
+    <!-- Campo: Tipo de orden (Spinner) -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipo de orden"
+        android:textSize="16sp"
+        android:fontFamily="@font/oswald"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Campo: Estado de la orden (Spinner) -->
+    <Spinner
+        android:id="@+id/spinnerTipoOrden"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:entries="@array/tipo_orden"
+        android:theme="@style/SpinnerTheme" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estado"
+        android:textSize="16sp"
+        android:fontFamily="@font/oswald"
+        android:layout_marginBottom="8dp" />
+
+    <Spinner
+        android:id="@+id/spinnerEstadoOrden"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:entries="@array/tipo_orden"
+        android:theme="@style/SpinnerTheme" />
+
+    <!-- Campo: Comentarios -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comentarios"
+        android:textSize="16sp"
+        android:fontFamily="@font/oswald"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/edtComentario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Comentarios"
+        android:inputType="text"
+        android:background="@android:color/white"
+        android:padding="12dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Botón Guardar -->
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>

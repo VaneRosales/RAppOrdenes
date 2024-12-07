@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_margin="8dp"
+
+    tools:context=".ui.activity.BebidaActivity">
+
+    <!-- Título centralizado -->
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="BEBIDAS"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        android:paddingBottom="8dp" />
+
+    <!-- Contenedor horizontal para el buscador y botones -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/busqueda"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:queryHint="Buscar bebida"
+            android:iconifiedByDefault="false"
+            android:theme="@style/WhiteIconTheme" />
+
+    </LinearLayout>
+
+    <!-- CardView para cada bebida con imagen, nombre, precio y cantidad -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewBebidas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:scrollbars="vertical" />
+    <!-- Contenedor para el total de productos y botón de detalles -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/txtCantidad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Total de productos: 0"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnDetalles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detalles"
+            android:textSize="16sp"
+            android:backgroundTint="#178582"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</LinearLayout>

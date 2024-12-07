@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Permitir tráfico HTTP (desarrollo local) -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">localhost</domain>  <!-- Para localhost -->
+        <domain includeSubdomains="true">10.0.2.2</domain>  <!-- Para emulador de Android Studio -->
+    </domain-config>
+
+    <!-- Deshabilitar la validación de certificados para el dominio de desarrollo -->
+    <domain-config>
+        <domain includeSubdomains="true">tu-dominio.com</domain> <!-- Reemplazar por tu dominio -->
+        <trust-anchors>
+            <certificates includeSystemCACerts="false" />
+        </trust-anchors>
+    </domain-config>
+</network-security-config>

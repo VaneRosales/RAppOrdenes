@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Ordenes" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+    <item name="colorPrimary">#178582</item>
+        <item name="android:windowBackground">#232C3B</item>
+        <item name="android:textColor">#FFFFFF</item>
+
+    </style>
+    <style name="Theme.Ordenes" parent="Base.Theme.Ordenes" />
+</resources>
